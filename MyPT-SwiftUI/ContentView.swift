@@ -34,7 +34,7 @@ struct ContentView: View {
                 ZStack(alignment: .topLeading) {
                     Rectangle()
                         .fill(Color.white)
-                        .frame(height: 250)
+                        .frame(height: 240)
                         .ignoresSafeArea()
                     
                     VStack(alignment: .leading, spacing: 20) {
@@ -68,7 +68,7 @@ struct ContentView: View {
                         }
                     }
                     .padding(.leading, 20)
-                    .padding(.top, 20)
+                 //   .padding(.top, 20)
                 }
                 
                 // List Section with Expandable Rows
@@ -97,6 +97,7 @@ struct ContentView: View {
                                                 .foregroundColor(.gray)
                                                 .padding(.top, 5)
                                                 .transition(.opacity) // Smooth appearance
+                                              
                                         }
                                     }
                                     
@@ -128,13 +129,14 @@ struct ContentView: View {
                 }
             }
             
-           
-
+            
+            
         }
         .sheet(isPresented: $showSheet) {
             if let exercise = selectedExercise {
                 ExerciseDetailView(exercise: exercise)
             }
+           
         }
         
         
@@ -147,7 +149,7 @@ struct ContentView: View {
                 .padding()
                 .frame(width: 350)
                 .background(Color(red: 175/255, green: 237/255, blue: 87/255))
-                .cornerRadius(25)        }
+            .cornerRadius(25)        }
     }
 }
 
